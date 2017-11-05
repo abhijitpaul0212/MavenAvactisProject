@@ -41,7 +41,7 @@ public class PurchaseItems
 //	  String browser = "FF";
 //	  String browser = "FF";
 // This is to be deleted
-	  System.out.println("");
+	  System.out.println("TEST");
 	  Browser.setBrowser(browser);
 	  ConfigProperties.loadProperties();
 	  homePage = new HomePage();
