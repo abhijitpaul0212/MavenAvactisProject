@@ -38,8 +38,7 @@ public class PurchaseItems
 //   public void beforeClass(String browser)
    public void beforeClass(String browser)
   {
-	 //This is my second commit
-	 //which should trigger a jenkins build
+//	  String browser = "FF";
 //	  String browser = "FF";
 	  Browser.setBrowser(browser);
 	  ConfigProperties.loadProperties();
