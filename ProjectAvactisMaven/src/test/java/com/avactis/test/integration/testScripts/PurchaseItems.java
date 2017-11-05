@@ -40,7 +40,8 @@ public class PurchaseItems
   {
 //	  String browser = "FF";
 //	  String browser = "FF";
-	  //This is to be deleted
+// This is to be deleted
+	  System.out.println("");
 	  Browser.setBrowser(browser);
 	  ConfigProperties.loadProperties();
 	  homePage = new HomePage();
