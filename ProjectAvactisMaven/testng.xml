@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Abhijit TestNG Suite">
+
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+      <listener class-name="com.avactis.test.integration.utility.MyListner"></listener>
+  </listeners>
+ 
+  
+  <test name="Test purchasing functionality">
+  <parameter name="browser" value="FF" />  
+ 		<classes>
+     		<class name="com.avactis.test.integration.testScripts.PurchaseItems" ></class>     		
+ 		</classes>
+     </test>     
+     
+   <test name="Test verification of purchased order by Admin">
+   <parameter name="browser" value="FF" />  
+ 		<classes>
+     		<class name="com.avactis.test.integration.testScripts.VerifyPlacedOrder"></class>
+ 		</classes>
+    </test>
+     
+     
+</suite> <!-- Suite --> 
+
+
+
