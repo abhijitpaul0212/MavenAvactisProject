@@ -39,9 +39,8 @@ public class PurchaseItems
    public void beforeClass(String browser)
   {
 //	  String browser = "FF";
-//	  String browser = "FF";
 // This is to be deleted
-	  System.out.println("TEST");
+	  System.out.println("I am in PurchaseItems.java file");
 	  Browser.setBrowser(browser);
 	  ConfigProperties.loadProperties();
 	  homePage = new HomePage();
