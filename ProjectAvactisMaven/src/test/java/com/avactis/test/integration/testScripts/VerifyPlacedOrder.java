@@ -21,7 +21,7 @@ public class VerifyPlacedOrder
   @BeforeClass(alwaysRun = true)
    public void beforeClass(String browser)
   {
-	  System.out.println("I am in VerifyPlacedOrder.jjava");
+	  System.out.println("I am in VerifyPlacedOrder.java");
 	  Browser.setBrowser(browser);
 	  ConfigProperties.loadProperties();
 	  adminSignInPage = new AdminSignInPage();
