@@ -66,6 +66,8 @@ public class PurchaseItems
 		}
 		signInPage.doSignIn("abhijitpaul_02@yahoo.com", "password123");		
 		Log.info("Store signin successfull");
+		Log.info("");
+		Log.info("");
 	}  
   
   
