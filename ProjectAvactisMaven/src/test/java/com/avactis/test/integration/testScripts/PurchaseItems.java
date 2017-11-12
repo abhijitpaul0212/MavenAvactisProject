@@ -56,7 +56,7 @@ public class PurchaseItems
      return(retObjArr);
   }    
   
-  @Test(groups = "Login", priority=0)
+  @Test(groups = "Login", priority=0, description="Login Scenario with valid username and password.")
 	public void signIn()
 	{
        SignInPage signInPage = homePage.doSignOut();
@@ -69,7 +69,7 @@ public class PurchaseItems
 	}  
   
   
- @Test (groups = {"testOrder1"}, dataProvider="DataProvider1", dependsOnGroups = "Login", priority=1)
+ @Test (groups = {"testOrder1"}, dataProvider="DataProvider1", dependsOnGroups = "Login", priority=1, description="Adding Items to Cart and performing Checkout.")
 	public void checkOutUsingMyCartMenu(String productPageContent, String mainMenuID,String mainMenuName, String subMenuID, String subMenuName, String productID, String paymentMethod, String shipmentMethod, String moreFlag)
 	{
 		homePage.get();
