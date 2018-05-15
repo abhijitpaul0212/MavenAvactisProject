@@ -24,7 +24,7 @@ public class HomePage extends LoadableComponent<HomePage>
 	@FindBy (xpath = "//button[contains(text(),'Register')]")
 	public static WebElement goToRegistrationPage;
 	
-	@FindBy (css = "*[href*='ketan479/sign-in.php']")
+	@FindBy (xpath = "//span/a")
 	public WebElement signInLink;
 	
 	@FindBy (xpath ="//a[contains(@href,'sign-in.php?')]")	
@@ -41,7 +41,8 @@ public class HomePage extends LoadableComponent<HomePage>
 	
 	public HomePage()
 	{
-		url = ConfigProperties.getProperty("STORE_URL");
+//		url = ConfigProperties.getProperty("STORE_URL");
+		url = "http://avactis.enm2fzis5n.us-east-2.elasticbeanstalk.com/";
 		PageFactory.initElements(Browser.getDriver(), this);
 //		Log.info("Store Home page browser is getting initialized");		
 	}
