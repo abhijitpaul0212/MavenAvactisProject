@@ -13,8 +13,8 @@ import com.avactis.test.integration.utility.*;
 public class AdminSignInPage extends LoadableComponent<AdminSignInPage>
 {
 	private String adminPageTitle = ConfigProperties.getProperty("ADMIN_TITLE");;
-	private String url = ConfigProperties.getProperty("ADMIN_URL");
-//	private String url = "http://avactis:avactis%40123@sandbox.avactis.com/ketan479/avactis-system/admin/";
+	//private String url = ConfigProperties.getProperty("ADMIN_URL");
+	private String url = "http://avactis.enm2fzis5n.us-east-2.elasticbeanstalk.com/avactis-system/admin/signin.php";
 
 	@FindBy (xpath = "//input[@name='AdminEmail'][@type='text']")
 	public WebElement adminUserNameInputBox;
@@ -28,6 +28,7 @@ public class AdminSignInPage extends LoadableComponent<AdminSignInPage>
 	public AdminSignInPage()
 	{
 		PageFactory.initElements(Browser.getEventDriver(), this);	
+		Browser.open(url);
 	}
 
 	@Override
