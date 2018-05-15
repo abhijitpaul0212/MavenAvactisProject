@@ -59,6 +59,7 @@ public class PurchaseItems
   @Test(groups = "Login", priority=0, description="Login Scenario with valid username and password.")
 	public void signIn()
 	{
+	  Log.info("Sign in module called");
        SignInPage signInPage = homePage.doSignOut();
 		if (signInPage == null)
 		{
@@ -70,7 +71,7 @@ public class PurchaseItems
 	}  
   
   
- @Test (groups = {"testOrder1"}, dataProvider="DataProvider1", dependsOnGroups = "Login", priority=1, description="Adding Items to Cart and performing Checkout.")
+ @Test (groups = {"testOrder"}, dataProvider="DataProvider1", dependsOnGroups = "Login", priority=1, description="Adding Items to Cart and performing Checkout.")
 	public void checkOutUsingMyCartMenu(String productPageContent, String mainMenuID,String mainMenuName, String subMenuID, String subMenuName, String productID, String paymentMethod, String shipmentMethod, String moreFlag)
 	{
 		homePage.get();

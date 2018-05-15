@@ -7,17 +7,23 @@
       <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
       <listener class-name="com.avactis.test.integration.utility.MyListner"></listener>
   </listeners>
- 
+  
   
   <test name="Test purchasing functionality">
   <parameter name="browser" value="FF" />  
  		<classes>
      		<class name="com.avactis.test.integration.testScripts.PurchaseItems" ></class>     		
  		</classes>
-     </test>     
+   </test>     
      
    <test name="Test verification of purchased order by Admin">
    <parameter name="browser" value="FF" />  
+   		<!-- groups>
+    		<dependencies>
+      			<group name="testPlacedOrder" depends-on="testOrder"/>
+    		</dependencies>
+  		</groups-->
+   
  		<classes>
      		<class name="com.avactis.test.integration.testScripts.VerifyPlacedOrder"></class>
  		</classes>

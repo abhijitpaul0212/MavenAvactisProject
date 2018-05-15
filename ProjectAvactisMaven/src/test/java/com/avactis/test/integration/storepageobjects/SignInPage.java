@@ -17,11 +17,12 @@ public class SignInPage extends LoadableComponent<SignInPage>
 	private static String title = ConfigProperties.getProperty("HOMEPAGE_TITLE");*/
 	
 	private static WebDriver driver;
-	private String url = "http://avactis:avactis%40123@sandbox.avactis.com/ketan479/";
+	private String url = "http://avactis.enm2fzis5n.us-east-2.elasticbeanstalk.com/";
 	private static String title = "Avactis Demo Store";
 	private  Properties obj;
 	
-	@FindBy(css = "*[href*='ketan479/sign-in.php']")
+	@FindBy(xpath = "//span/a")
+//  *[href*='ketan479/sign-in.php']
 	WebElement signInLink;
 	
 	@FindBy(xpath = "//a[contains(@href,'register.php')]")	
@@ -74,7 +75,7 @@ public class SignInPage extends LoadableComponent<SignInPage>
 	@Override
 	protected void isLoaded() throws Error 
 	{
-		Waiting.WaitForElement(Browser.getDriver(), registerLink, 30);	
+		Waiting.WaitForElement(Browser.getDriver(), registerLink, 50);	
 	}
 
 	@Override

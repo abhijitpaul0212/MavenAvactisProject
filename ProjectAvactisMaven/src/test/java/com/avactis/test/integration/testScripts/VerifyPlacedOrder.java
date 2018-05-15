@@ -26,9 +26,10 @@ public class VerifyPlacedOrder
 	  ConfigProperties.loadProperties();
 	  adminSignInPage = new AdminSignInPage();
 	  adminSignInPage.get();
+	  //adminSignInPage.doSignIn();
   }
   
-  @Test
+  @Test(groups = {"testPlacedOrder"}, description="Test for verifying placed order")
   public void verifyPlacedOrderUsingID() 
   {
 	  assertTrue(adminSignInPage.SearchOrder());
